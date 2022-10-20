@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "fHq9iLCgJNyeqE+rX9N9Wy6UakAtKHR1DefK/P/m3NgBJL4DDoijV7kkSSleTNfn7OurSdalMGDXv6aS34rXxw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin.iOS\\IIUMPassXamarin.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aiman\\.nuget\\packages\\microsoft.netcore.platforms\\6.0.6\\microsoft.netcore.platforms.6.0.6.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2515 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n IIUMPassXamarin.iOS.csproj -> IIUMPassXamarin -> Xamarin.Forms (>= 5.0.0.2515) \r\n IIUMPassXamarin.iOS.csproj -> Xamarin.Forms (>= 5.0.0.2012)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

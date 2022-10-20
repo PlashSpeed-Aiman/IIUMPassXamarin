@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IIUMPassXamarin"
+             x:Class="IIUMPassXamarin.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackLayout  Margin="10" Padding="10">
+            <Entry  x:Name="EntryNum" Placeholder="Matrics Number" Keyboard="Telephone"></Entry>
+            <Entry  x:Name="EntryPass" IsPassword="True"  Placeholder="Password"></Entry>
+            <Button Clicked="Button_OnClicked" Text="Save"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <Button Text="Login" Clicked="Button_OnClicked2"  Margin="10" Padding="10"></Button>
+            <Button Text="Logout" Clicked="OnClicked_Logout"  Margin="10" Padding="10"></Button>
+        </StackLayout>
+    </Grid>
+    
+
+</ContentPage>
