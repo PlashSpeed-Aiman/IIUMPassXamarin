@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin.iOS\\IIUMPassXamarin.iOS.csproj",
-        "projectName": "IIUMPassXamarin.iOS.csproj",
+        "projectName": "IIUMPassXamarin.iOS",
         "projectPath": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin.iOS\\IIUMPassXamarin.iOS.csproj",
         "packagesPath": "C:\\Users\\Aiman\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin.iOS\\obj\\",
@@ -40,7 +40,7 @@
           "dependencies": {
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2515, )"
             }
           }
         }

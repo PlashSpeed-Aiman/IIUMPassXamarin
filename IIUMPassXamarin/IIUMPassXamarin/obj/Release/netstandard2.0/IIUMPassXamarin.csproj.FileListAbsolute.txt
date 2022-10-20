@@ -1,0 +1,13 @@
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\bin\Release\netstandard2.0\IIUMPassXamarin.deps.json
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\bin\Release\netstandard2.0\IIUMPassXamarin.dll
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\bin\Release\netstandard2.0\IIUMPassXamarin.pdb
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.csproj.AssemblyReference.cache
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.AssemblyInfoInputs.cache
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.AssemblyInfo.cs
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.csproj.CoreCompileInputs.cache
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.dll
+C:\Users\Aiman\RiderProjects\IIUMPassXamarin\IIUMPassXamarin\IIUMPassXamarin\obj\Release\netstandard2.0\IIUMPassXamarin.pdb
