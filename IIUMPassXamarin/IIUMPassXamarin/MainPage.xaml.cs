@@ -16,12 +16,17 @@ namespace IIUMPassXamarin
     {
         private const string WIFI_LOGIN_URL = "https://captiveportalmahallahgombak.iium.edu.my/cgi-bin/login";
         private const string WIFI_LOGOUT_URL = "https://captiveportal-login.iium.edu.my/cgi-bin/login?cmd=logout";
+        private HttpClientHandler httpHandler;
+        private HttpClient httpClient;
         public MainPage()
         {
             
             InitializeComponent();
             EntryNum.Text = String.Empty;
             EntryPass.Text = String.Empty;
+            httpHandler = new HttpClientHandler();
+            httpHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+            httpClient = new HttpClient(httpHandler);
         }
 
         private async void Button_OnClicked(object sender, EventArgs e)
@@ -32,8 +37,10 @@ namespace IIUMPassXamarin
             }
             else
             {
-                Preferences.Set("user_name",EntryNum.Text);
-                Preferences.Set("pass_key",EntryPass.Text);
+                var username = EntryNum.Text.Trim();
+                var password = EntryPass.Text.Trim();
+                Preferences.Set("user_name",username);
+                Preferences.Set("pass_key",password);
                 EntryNum.Text=String.Empty;
                 EntryPass.Text=String.Empty;
                 await this.DisplayToastAsync("Matric Number & Password Saved");
@@ -43,12 +50,7 @@ namespace IIUMPassXamarin
 
         private async void Button_OnClicked2(object sender, EventArgs e)
         {
-            using (var httpHandle = new HttpClientHandler())
-            {
-                httpHandle.ServerCertificateCustomValidationCallback  = (message, cert, chain, errors) => { return true; };
-            using (var client = new HttpClient())
-            {
-
+            
                 var content = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("user", Preferences.Get("user_name", "")),
@@ -59,9 +61,7 @@ namespace IIUMPassXamarin
                 });
                 try
                 {
-                    ServicePointManager.ServerCertificateValidationCallback =
-                        (message, certificate, chain, sslPolicyErrors) => true;
-                    var result = await client.PostAsync(WIFI_LOGIN_URL, content);
+                    var result = await httpClient.PostAsync(WIFI_LOGIN_URL, content);
                     string resultContent = await result.Content.ReadAsStringAsync();
                     Trace.WriteLine(resultContent);
                     await this.DisplayToastAsync("Connection Successful");
@@ -71,36 +71,27 @@ namespace IIUMPassXamarin
                 {
                     Trace.WriteLine(ew);
                     await this.DisplayToastAsync("EXCEPTION UNHANDLED! Maybe You Have Already Logged-In");
+                    Label1.Text = ew.Message;
                 }
-                
-            } 
-            }
-    }
+        }
 
         private async void OnClicked_Logout(object sender, EventArgs e)
         {
-            using (var httpHandle = new HttpClientHandler())
+            try
             {
-                httpHandle.ServerCertificateCustomValidationCallback  = (message, cert, chain, errors) => { return true; };
-                using (var client = new HttpClient(httpHandle))
-                {
-                    try
-                    {
-                        var result = await client.GetAsync(WIFI_LOGOUT_URL);
-                        string resultContent = await result.Content.ReadAsStringAsync();
-                        Trace.WriteLine(resultContent);
-                        await this.DisplayToastAsync("Logout Successful! (Maybe)");
+                var result = await httpClient.GetAsync(WIFI_LOGOUT_URL);
+                string resultContent = await result.Content.ReadAsStringAsync();
+                Trace.WriteLine(resultContent);
+                await this.DisplayToastAsync("Logout Successful! (Maybe)");
 
-                    }
-                    catch (Exception ew)
-                    {
-                        Trace.WriteLine(ew.ToString());
-                        await this.DisplayToastAsync("EXCEPTION UNHANDLED");
-                    }
-                    
-                }
             }
-           
+            catch (Exception ew)
+            {
+                Trace.WriteLine(ew.ToString());
+                await this.DisplayToastAsync("EXCEPTION UNHANDLED");
+                Label1.Text = ew.Message;
+
+            }
         }
     }
 }
