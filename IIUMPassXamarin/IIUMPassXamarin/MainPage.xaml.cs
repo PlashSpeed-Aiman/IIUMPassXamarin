@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using IIUMPassXamarin.Helpers;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -18,6 +19,11 @@ namespace IIUMPassXamarin
         private const string WIFI_LOGOUT_URL = "https://captiveportal-login.iium.edu.my/cgi-bin/login?cmd=logout";
         private HttpClientHandler httpHandler;
         private HttpClient httpClient;
+
+        private string UpdateLog = @"
+        
+        "; 
+                                   
         public MainPage()
         {
             
@@ -41,8 +47,8 @@ namespace IIUMPassXamarin
                 var password = EntryPass.Text.Trim();
                 Preferences.Set("user_name",username);
                 Preferences.Set("pass_key",password);
-                EntryNum.Text=String.Empty;
-                EntryPass.Text=String.Empty;
+                EntryNum.Text  = String.Empty;
+                EntryPass.Text = String.Empty;
                 await this.DisplayToastAsync("Matric Number & Password Saved");
             }
             
@@ -50,29 +56,22 @@ namespace IIUMPassXamarin
 
         private async void Button_OnClicked2(object sender, EventArgs e)
         {
-            
-                var content = new FormUrlEncodedContent(new[]
-                {
-                    new KeyValuePair<string, string>("user", Preferences.Get("user_name", "")),
-                    new KeyValuePair<string, string>("password", Preferences.Get("pass_key", "")),
-                    new KeyValuePair<string, string>("url", "http://www.iium.edu.my/"),
-                    new KeyValuePair<string, string>("cmd", "authenticate"),
-                    new KeyValuePair<string, string>("Login", "Log In"),
-                });
-                try
-                {
-                    var result = await httpClient.PostAsync(WIFI_LOGIN_URL, content);
-                    string resultContent = await result.Content.ReadAsStringAsync();
-                    Trace.WriteLine(resultContent);
-                    await this.DisplayToastAsync("Connection Successful");
 
-                }
-                catch (Exception ew)
-                {
-                    Trace.WriteLine(ew);
-                    await this.DisplayToastAsync("EXCEPTION UNHANDLED! Maybe You Have Already Logged-In");
-                    Label1.Text = ew.Message;
-                }
+            var content = LoginHelper.CreateForm();
+            try
+            {
+                var result = await httpClient.PostAsync(WIFI_LOGIN_URL, content);
+                string resultContent = await result.Content.ReadAsStringAsync();
+                Trace.WriteLine(resultContent);
+                await this.DisplayToastAsync("Connection Successful");
+
+            }
+            catch (Exception ew)
+            {
+                Trace.WriteLine(ew);
+                await this.DisplayToastAsync("EXCEPTION UNHANDLED! Maybe You Have Already Logged-In");
+                Label1.Text = ew.Message;
+            }
         }
 
         private async void OnClicked_Logout(object sender, EventArgs e)
