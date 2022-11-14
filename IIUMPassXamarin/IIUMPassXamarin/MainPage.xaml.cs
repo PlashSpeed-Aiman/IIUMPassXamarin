@@ -19,20 +19,25 @@ namespace IIUMPassXamarin
         private const string WIFI_LOGOUT_URL = "https://captiveportal-login.iium.edu.my/cgi-bin/login?cmd=logout";
         private HttpClientHandler httpHandler;
         private HttpClient httpClient;
-
-        private string UpdateLog = @"
         
-        "; 
-                                   
+        
+        
         public MainPage()
         {
-            
             InitializeComponent();
+            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            WifiLabel.Text = "Current Connection : " + DependencyService.Get<IWifiLister>().StateWifi().Replace("\"","");
             EntryNum.Text = String.Empty;
             EntryPass.Text = String.Empty;
             httpHandler = new HttpClientHandler();
             httpHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
             httpClient = new HttpClient(httpHandler);
+        }
+
+        private void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+            WifiLabel.Text = "Current Connection : " + DependencyService.Get<IWifiLister>().StateWifi().Replace("\"","");
+
         }
 
         private async void Button_OnClicked(object sender, EventArgs e)
