@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using IIUMPassXamarin.Helpers;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
@@ -32,6 +27,10 @@ namespace IIUMPassXamarin
             httpHandler = new HttpClientHandler();
             httpHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
             httpClient = new HttpClient(httpHandler);
+        }
+        protected override void OnAppearing(){
+            WifiLabel.Text = "Current Connection : " + DependencyService.Get<IWifiLister>().StateWifi().Replace("\"","");
+
         }
 
         private void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
@@ -99,9 +98,4 @@ namespace IIUMPassXamarin
         }
     }
 }
-//Login dashboard
-//Add option to explore app
-//standardise pictures
-//find recipes malaysia
-//simulate purchase
-//
+
