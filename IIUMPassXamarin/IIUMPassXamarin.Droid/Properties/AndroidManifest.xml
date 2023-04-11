@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.31" package="com.companyname.IIUMPassXamarin">
-    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <application android:label="IIUMPassXamarin.Droid"></application>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.31" package="com.companyname.IIUMPassXamarin" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="IIUMPassXamarin.Droid" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round"></application>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 </manifest>

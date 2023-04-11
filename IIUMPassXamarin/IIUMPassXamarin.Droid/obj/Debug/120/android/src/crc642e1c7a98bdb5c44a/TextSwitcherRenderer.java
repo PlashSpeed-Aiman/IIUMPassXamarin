@@ -22,16 +22,18 @@ public class TextSwitcherRenderer
 	public TextSwitcherRenderer (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == TextSwitcherRenderer.class)
+		if (getClass () == TextSwitcherRenderer.class) {
 			mono.android.TypeManager.Activate ("Xamarin.CommunityToolkit.UI.Views.TextSwitcherRenderer, Xamarin.CommunityToolkit", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public TextSwitcherRenderer (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == TextSwitcherRenderer.class)
+		if (getClass () == TextSwitcherRenderer.class) {
 			mono.android.TypeManager.Activate ("Xamarin.CommunityToolkit.UI.Views.TextSwitcherRenderer, Xamarin.CommunityToolkit", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 

@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "KGOIzLLkPFLp2zk8SOgA0JTEJcWoBbr0ImfBZ9DwgOOV0vYO6m53RTdTPHyKo+kvh+8GYwv6dSg7nRp4OHJsag==",
+  "dgSpecHash": "8RZVUjzRK+WBeyk8UKDCoCRQsNtQuAGZlGAeY4Rsg9VKw3hMhgFjrpDPrZi0olVs1xiBce4+SmVUylFe6qxhhw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin.iOS\\IIUMPassXamarin.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Aiman\\.nuget\\packages\\microsoft.netcore.platforms\\6.0.6\\microsoft.netcore.platforms.6.0.6.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\microsoft.netcore.platforms\\7.0.0\\microsoft.netcore.platforms.7.0.0.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
-    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
-    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.essentials\\1.7.4\\xamarin.essentials.1.7.4.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms\\5.0.0.2545\\xamarin.forms.5.0.0.2545.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2545\\xamarin.forms.visual.material.5.0.0.2545.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
   ],
   "logs": []
 }

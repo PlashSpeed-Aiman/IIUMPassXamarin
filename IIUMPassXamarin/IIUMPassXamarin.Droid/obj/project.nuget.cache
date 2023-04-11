@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7ZwltqHLRCJx5Y15mPpFwRL4n1sdu10kK04Ptd+0CHaRnQ30epCJDKbYClX2qahnny1CsMV6/yoq5FbG7r+brQ==",
+  "dgSpecHash": "4hpCtlFE82qUYc/QIKOG/3J2kjkIb7kLIEME+23bcxQMOcBqzMhAYUZB3cb6cSaotY2tV+7hpt0XrgA1v/rpTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin.Droid\\IIUMPassXamarin.Droid.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Aiman\\.nuget\\packages\\microsoft.netcore.platforms\\6.0.6\\microsoft.netcore.platforms.6.0.6.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\microsoft.netcore.platforms\\7.0.0\\microsoft.netcore.platforms.7.0.0.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
@@ -60,8 +60,9 @@
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.8\\xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
-    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
-    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.essentials\\1.7.4\\xamarin.essentials.1.7.4.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms\\5.0.0.2545\\xamarin.forms.5.0.0.2545.nupkg.sha512",
+    "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2545\\xamarin.forms.visual.material.5.0.0.2545.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\Aiman\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

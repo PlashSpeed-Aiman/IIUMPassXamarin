@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 using IIUMPassXamarin.Helpers;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
@@ -8,18 +10,23 @@ using Xamarin.Forms;
 
 namespace IIUMPassXamarin
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         private const string WIFI_LOGIN_URL = "https://captiveportalmahallahgombak.iium.edu.my/cgi-bin/login";
         private const string WIFI_LOGOUT_URL = "https://captiveportal-login.iium.edu.my/cgi-bin/login?cmd=logout";
         private HttpClientHandler httpHandler;
         private HttpClient httpClient;
-        
+        private Task tsk;
         
         
         public MainPage()
         {
             InitializeComponent();
+            tsk = new Task(async () =>
+            {
+                await ProgressBarConnecting.ProgressTo(1, 5000, Easing.SinIn);
+                ProgressBarConnecting.Progress = 0.0;
+            });
             Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
             WifiLabel.Text = "Current Connection : " + DependencyService.Get<IWifiLister>().StateWifi().Replace("\"","");
             EntryNum.Text = String.Empty;
@@ -60,21 +67,36 @@ namespace IIUMPassXamarin
 
         private async void Button_OnClicked2(object sender, EventArgs e)
         {
-
+            var token = new CancellationTokenSource();
             var content = LoginHelper.CreateForm();
             try
             {
+               
+                LoginButton.IsEnabled = false;
+                LogoutButton.IsEnabled = false;
+                var _ = Task.Run(async () =>
+                {
+                    await ProgressBarConnecting.ProgressTo(1, 3000, Easing.SinIn);
+                },token.Token);
+                
                 var result = await httpClient.PostAsync(WIFI_LOGIN_URL, content);
                 string resultContent = await result.Content.ReadAsStringAsync();
                 Trace.WriteLine(resultContent);
+                token.Cancel();
+                await ProgressBarConnecting.ProgressTo(0.0,1000,Easing.SinIn);
                 await this.DisplayToastAsync("Connection Successful");
+                LoginButton.IsEnabled = true;
+                LogoutButton.IsEnabled = true;
 
             }
             catch (Exception ew)
             {
-                Trace.WriteLine(ew);
-                await this.DisplayToastAsync("EXCEPTION UNHANDLED! Maybe You Have Already Logged-In");
+                token.Cancel();
+                await ProgressBarConnecting.ProgressTo(0.0,2000,Easing.SinIn);
+                await this.DisplayToastAsync("EXCEPTION UNHANDLED! Maybe You Have Already Logged-In",durationMilliseconds:1500);
                 Label1.Text = ew.Message;
+                LoginButton.IsEnabled = true;
+                LogoutButton.IsEnabled = true;
             }
         }
 
@@ -95,6 +117,14 @@ namespace IIUMPassXamarin
                 Label1.Text = ew.Message;
 
             }
+        }
+
+        private async void ProgressButtonTest_OnClicked(object sender, EventArgs e)
+        {
+            await ProgressBarConnecting.ProgressTo(1, 5000, Easing.SinIn);
+            await ProgressBarConnecting.ProgressTo(0.0, 1000, Easing.SinIn);
+            
+
         }
     }
 }

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Microsoft.NETCore.Platforms/6.0.6": {
+      "Microsoft.NETCore.Platforms/7.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -115,7 +115,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.7.3": {
+      "Xamarin.Essentials/1.7.4": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -131,7 +131,7 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2515": {
+      "Xamarin.Forms/5.0.0.2545": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
@@ -155,14 +155,26 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2545": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2545"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
       }
     }
   },
   "libraries": {
-    "Microsoft.NETCore.Platforms/6.0.6": {
-      "sha512": "SY/0w14u+YZedKhVuCtL3V2KOboCAg2U38dnXeZalJxKd3nYEr6GgKZ9PsbMfn/6OUF6AK29i8vLJYkejHSyaA==",
+    "Microsoft.NETCore.Platforms/7.0.0": {
+      "sha512": "ZmCEGPLRDVy0WF6erzJw0G+puBM6s2DxRzRqvYvgHmXE6e34P0HVRtNl6s3nKKSDkD3DQH1QLKWL7fKe3GBSUA==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/6.0.6",
+      "path": "microsoft.netcore.platforms/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -170,7 +182,7 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.6.0.6.nupkg.sha512",
+        "microsoft.netcore.platforms.7.0.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt"
@@ -575,10 +587,10 @@
         "xamarin.communitytoolkit.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.7.3": {
-      "sha512": "b6NfxOfkmMGN54a4OcV/D7KXclWWqFwgixMPzlAku3kfKgUBGW4vBdNaujIBmk57NbGpWB2IS78ek0gDHNKwoQ==",
+    "Xamarin.Essentials/1.7.4": {
+      "sha512": "oYCnkjzooqWdI1VnOOt1gyUF+s1Nbi6OYy7HlltzHrfNyh8MMKgMTO30UGe3kcj9YmD7IeT5clh3xCDmfTfZSw==",
       "type": "package",
-      "path": "xamarin.essentials/1.7.3",
+      "path": "xamarin.essentials/1.7.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -613,14 +625,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.7.3.nupkg.sha512",
+        "xamarin.essentials.1.7.4.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2515": {
-      "sha512": "n/Y/xk1idWRkxk7xItwvNwwda7CHpIk7JxD6tXkGXmTqiVGV1xRkepf5aKXFkQLM9KIQhXXYBxPsdyJysPpktw==",
+    "Xamarin.Forms/5.0.0.2545": {
+      "sha512": "mjfNx4Y/RD0FYjrBfETT2iNdFD1WCXN5wNHPhQaXm3k0u5XYJaOx5K83EZ8nVun+FPi7Wo3rQPIN0DLCs5PG4A==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2515",
+      "path": "xamarin.forms/5.0.0.2545",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -829,22 +841,46 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2515.nupkg.sha512",
+        "xamarin.forms.5.0.0.2545.nupkg.sha512",
         "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Forms.Visual.Material/5.0.0.2545": {
+      "sha512": "VGOSVd7HOJEkMGOIDUMJFRLMq3bl9URGnW9U2R/WctkhD4NQojyHJu2IcwHCrAdOTZcipDqHWwbEP/SOintAfg==",
+      "type": "package",
+      "path": "xamarin.forms.visual.material/5.0.0.2545",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "build/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
+        "buildTransitive/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Material.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Material.pdb",
+        "lib/MonoAndroid10/_._",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Material.pdb",
+        "lib/netstandard1.0/_._",
+        "lib/tizen40/Xamarin.Forms.Material.dll",
+        "lib/tizen40/Xamarin.Forms.Material.pdb",
+        "xamarin.forms.visual.material.5.0.0.2545.nupkg.sha512",
+        "xamarin.forms.visual.material.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Microsoft.NETCore.Platforms >= 6.0.6",
+      "Microsoft.NETCore.Platforms >= 7.0.0",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.CommunityToolkit >= 2.0.5",
-      "Xamarin.Essentials >= 1.7.3",
-      "Xamarin.Forms >= 5.0.0.2515"
+      "Xamarin.Essentials >= 1.7.4",
+      "Xamarin.Forms >= 5.0.0.2545",
+      "Xamarin.Forms.Visual.Material >= 5.0.0.2545"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aiman\\.nuget\\packages\\": {}
+    "C:\\Users\\Aiman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -855,8 +891,12 @@
       "packagesPath": "C:\\Users\\Aiman\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Aiman\\RiderProjects\\IIUMPassXamarin\\IIUMPassXamarin\\IIUMPassXamarin\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Aiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -864,7 +904,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/khuDumg6f7zySIeOp3b5O6dcfLd7tZ3bwCkvMaVfQ525zRv8cE/api": {}
       },
       "frameworks": {
         "netstandard2.0": {
@@ -884,7 +926,7 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": {
             "target": "Package",
-            "version": "[6.0.6, )"
+            "version": "[7.0.0, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -898,11 +940,15 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.7.3, )"
+            "version": "[1.7.4, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2515, )"
+            "version": "[5.0.0.2545, )"
+          },
+          "Xamarin.Forms.Visual.Material": {
+            "target": "Package",
+            "version": "[5.0.0.2545, )"
           }
         },
         "imports": [
@@ -911,11 +957,12 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

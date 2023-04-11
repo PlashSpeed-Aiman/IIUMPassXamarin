@@ -19,16 +19,18 @@ public class SemanticEffectRouter_SemanticAccessibilityDelegate
 	public SemanticEffectRouter_SemanticAccessibilityDelegate ()
 	{
 		super ();
-		if (getClass () == SemanticEffectRouter_SemanticAccessibilityDelegate.class)
+		if (getClass () == SemanticEffectRouter_SemanticAccessibilityDelegate.class) {
 			mono.android.TypeManager.Activate ("Xamarin.CommunityToolkit.Android.Effects.SemanticEffectRouter+SemanticAccessibilityDelegate, Xamarin.CommunityToolkit", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 
 	public SemanticEffectRouter_SemanticAccessibilityDelegate (android.view.View.AccessibilityDelegate p0)
 	{
 		super (p0);
-		if (getClass () == SemanticEffectRouter_SemanticAccessibilityDelegate.class)
+		if (getClass () == SemanticEffectRouter_SemanticAccessibilityDelegate.class) {
 			mono.android.TypeManager.Activate ("Xamarin.CommunityToolkit.Android.Effects.SemanticEffectRouter+SemanticAccessibilityDelegate, Xamarin.CommunityToolkit", "Android.Views.View+AccessibilityDelegate, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 

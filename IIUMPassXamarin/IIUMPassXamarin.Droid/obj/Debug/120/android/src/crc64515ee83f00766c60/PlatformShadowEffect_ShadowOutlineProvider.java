@@ -19,15 +19,17 @@ public class PlatformShadowEffect_ShadowOutlineProvider
 	public PlatformShadowEffect_ShadowOutlineProvider ()
 	{
 		super ();
-		if (getClass () == PlatformShadowEffect_ShadowOutlineProvider.class)
+		if (getClass () == PlatformShadowEffect_ShadowOutlineProvider.class) {
 			mono.android.TypeManager.Activate ("Xamarin.CommunityToolkit.Android.Effects.PlatformShadowEffect+ShadowOutlineProvider, Xamarin.CommunityToolkit", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	public PlatformShadowEffect_ShadowOutlineProvider (float p0, float p1, float p2)
 	{
 		super ();
-		if (getClass () == PlatformShadowEffect_ShadowOutlineProvider.class)
+		if (getClass () == PlatformShadowEffect_ShadowOutlineProvider.class) {
 			mono.android.TypeManager.Activate ("Xamarin.CommunityToolkit.Android.Effects.PlatformShadowEffect+ShadowOutlineProvider, Xamarin.CommunityToolkit", "System.Single, mscorlib:System.Single, mscorlib:System.Single, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
+		}
 	}
 
 

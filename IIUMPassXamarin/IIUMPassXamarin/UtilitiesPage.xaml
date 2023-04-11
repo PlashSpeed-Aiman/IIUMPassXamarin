@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="IIUMPassXamarin.UtilitiesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Frame Margin="10">
+                <StackLayout>
+                    <views:Expander>
+                        <views:Expander.Header>
+                            <StackLayout>
+                                <Label FontSize="15">WhatsApp Tool</Label>
+                               
+                            </StackLayout>
+                        </views:Expander.Header>
+                        <views:Expander.Content>
+                            <StackLayout>
+                                <Entry x:Name="Entry" TextChanged="InputView_OnTextChanged"></Entry>
+                                <Button
+                                    HorizontalOptions="End" Text="Message" Clicked="Button_OnClicked"></Button>
+                               <Frame   HasShadow="False" BorderColor="Black" BackgroundColor="Azure">
+                                   <StackLayout>
+                                       <Label Text="Double tap to copy"></Label>
+                                       <Label x:Name="Label" FontSize="15" TextColor="Black"></Label>    
+                                   </StackLayout>
+                                   
+                                   <Frame.GestureRecognizers>
+                                       <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                                   </Frame.GestureRecognizers>
+                               </Frame>
+                                
+                                
+                            </StackLayout>
+                        </views:Expander.Content>
+                    </views:Expander>
+                    <Frame>
+                        <StackLayout>
+                            <Button Text="IMaalum"></Button>
+                        </StackLayout>
+                    </Frame>                   
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
